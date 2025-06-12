@@ -32,6 +32,8 @@ npm install openai dotenv
 - Create a file named `.env` in the project root.
 - Add your OpenAI API key to the file:
 
+Note :  we use baseUrl while connecting to OpenAi api , If you have openAi api key remove the baseUrl and if not create a github model api key 
+
 ### 4. Run the Script
 
 ```bash
