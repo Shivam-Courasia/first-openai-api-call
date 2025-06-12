@@ -5,6 +5,7 @@ const { OpenAI } = require('openai');
 let openai;
 try {
     openai = new OpenAI({
+        baseURL: "https://models.github.ai/inference",
         apiKey: process.env.OPENAI_API_KEY
     });
     console.log('✅ Successfully connected to OpenAI API');
@@ -29,7 +30,7 @@ async function getChatCompletion() {
 
             // Make the API call
             const completion = await openai.chat.completions.create({
-                model: "gpt-3.5-turbo",
+                model: "openai/gpt-4.1",
                 messages: [
                     { role: "system", content: systemPrompt },
                     { role: "user", content: userPrompt }
